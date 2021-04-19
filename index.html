@@ -1,0 +1,155 @@
+<!doctype html>
+<html ⚡ lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+<meta name="google-site-verification" content="lu0ezzTuvs3DZa0Zx7k3T0_Izfrwd7ovQT2jz88VbkQ" />
+    <meta name="description" content="mod-i amp ver">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
+    <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <style amp-custom>
+    /* Add your styles here */
+      :root{
+        --bg-main: ghostwhite;
+        --bg-menu: black;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        -webkit-text-size-adjust: 100%;
+        background: var(--bg-main);
+        font-size: 10px;
+      }
+      amp-accordion {
+        background: var(--bg-menu);
+        color: var(--bg-main);
+      }
+      amp-accordion a{
+        background: var(--bg-menu);
+        color: var(--bg-main);
+        text-decoration: none;
+        padding: 0 5px;
+      }
+      amp-accordion .amp_a{
+      background: var(--bg-menu);
+      width: auto;
+      }
+      amp-carousel{
+        height: 89px;
+        background: var(--bg-menu);
+      }
+      .li-img:hover{
+        opacity: 0.8;
+      }
+      button{
+        color: var(--bg-main);
+        background-color: var(--bg-menu);
+      }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="canonical" href="https://mod-i.vercel.app/index.html">
+    <title>i-py amp</title>
+    <link rel="manifest" href="./manifest.json">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Webpage",
+        "url": "https://mod-i.vercel.app/index.html",
+        "name": "mod_i amp",
+        "headline": "mod_i amp",
+        "description": "mod_i amp",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://mod-i.vercel.app/index.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Publisher",
+          "logo": {
+            "url": "https://mod-i.vercel.app/assets/logo-512.png",
+            "width": 175,
+            "height": 60,
+            "@type": "ImageObject"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://mod-i.vercel.app/img/md_2.JPG",
+          "width": 1200,
+          "height": 630
+        }
+      }
+    </script>
+  </head>
+<body>
+  <amp-state id="my_data" src=".">
+    <script type="application/json">
+      {
+        "items":[
+      {
+          "name": "Ruth",
+          "job": "programmer"
+        },
+        {
+          "name": "Miut",
+          "job": "contacter"
+        }
+        ]
+      }
+    </script>
+  </amp-state>
+  <p [text]="my_data.items.map(i=>i.name)">wm name:</p>
+  <p [text]="my_data.items.map(i=>i.job)">wm job:</p>
+
+  <p [text]="'maud :: ' + name">inf</p>
+  <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
+
+  <p [text]="'ruth :: ' + nm">dat</p>
+  <button on="tap:AMP.setState({nm: 'Ruth'})">ruth</button>
+
+  <button on="tap:my_data.refresh">refr</button>
+  <!-- <button on="tap:proza.toggleVisibility,vid.toggleVisibility">hide</button> -->
+
+<amp-bind-macro id="replaceSpace" arguments="str" expression="str.toLowerCase()">
+</amp-bind-macro>
+
+<p>
+  Type in
+</p>
+<input type="text" placeholder="dat" on="tap:AMP.setState({ argumentString: event.value })">
+<p [text]="'You have create a sanitized link: https://www.google.com/search?q=' + replaceSpace(argumentString)">
+  Your sanitized link will display here. You can copy and paste into search bar to test.
+</p>
+
+
+
+<amp-bind-macro id="replaceSpace" arguments="str" expression="str.toLowerCase()">
+</amp-bind-macro>
+
+<input type="text" placeholder="dat" on="tap:AMP.setState({ argumentString: event.value })">
+<p [text]="'Input is ' + data">
+  Your sanitized link will display here. You can copy and paste into search bar to test.
+</p>
+
+
+  <amp-install-serviceworker src="../sw.js"
+                             data-iframe-src="install-sw.html"
+                             layout="nodisplay">
+  </amp-install-serviceworker>
+
+</body>
+</html>
