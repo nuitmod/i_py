@@ -1,10 +1,10 @@
 {
-  "name": "Mod pwa",
-  "short_name": "mod",
+  "name": "i-py pr",
+  "short_name": "i-pr",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#000",
-  "description": "A mode pwa app.",
+  "description": "i-pp pwa app.",
   "icons": [
       {
           "src": "assets/logo-192.png",

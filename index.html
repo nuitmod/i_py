@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="mod-i amp ver">
+    <meta name="description" content="i-py ver">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
@@ -19,7 +19,7 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <style amp-custom>
-    /* Add your styles here */
+      /* Add your styles here */
       :root{
         --bg-main: ghostwhite;
         --bg-menu: black;
@@ -51,16 +51,13 @@
         height: 89px;
         background: var(--bg-menu);
       }
-      .li-img:hover{
-        opacity: 0.8;
-      }
       button{
         color: var(--bg-main);
         background-color: var(--bg-menu);
       }
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="canonical" href="https://mod-i.vercel.app/index.html">
+    <link rel="canonical" href="https://i-py.vercel.app/index.html">
     <title>i-py amp</title>
     <link rel="manifest" href="./manifest.webmanifest">
     <script type="application/ld+json">
@@ -125,25 +122,23 @@
 
   <!-- <button on="tap:my_data.refresh">refr</button>
   <button on="tap:proza.toggleVisibility,vid.toggleVisibility">hide</button> -->
-
-<amp-bind-macro id="replaceSpace" arguments="str" expression="str.toLowerCase()">
+<!-- <amp-bind-macro id="replaceSpace" arguments="str" expression="str.toLowerCase()">
 </amp-bind-macro>
-
 <p>
   Type in
 </p>
 <input type="text" placeholder="dat" on="tap:AMP.setState({ argumentString: event.value })">
 <p [text]="'You have create a sanitized link: https://www.google.com/search?q=' + replaceSpace(argumentString)">
   Your sanitized link will display here. You can copy and paste into search bar to test.
-</p>
+</p> -->
 
 
 
 <amp-bind-macro id="replaceSpace" arguments="str" expression="str.toLowerCase()">
 </amp-bind-macro>
 
-<input type="text" placeholder="dat" on="tap:AMP.setState({ argumentString: event.value })">
-<p [text]="'Input is ' + data">
+<input type="text" placeholder="dat" on="input-throttled:AMP.setState({ arg: event.value })">
+<p [text]="'Input is ' + replaceSpace(arg)">
   Your sanitized link will display here. You can copy and paste into search bar to test.
 </p>
 
