@@ -10,20 +10,20 @@ var $ = window.jQuery;
 
 console.log("main file");
 
-let name="i-py pr";
-
-var header=()=>html`
-  <amp-accordion class="menu" disable-session-states>
-    <section>
-      <h5 class="amp_a">${name}</h5>
-      <div>
-        <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
-        <a href="https://nuitmod.github.io/npx_io/">npx_io</a>
-        <a href="https://nuitmod.github.io/io_proj/amp/">io_proj</a>
-        <a href="https://nuitmod.github.io/mod_i">mod_i main</a>
-      </div>
-    </section>
-  </amp-accordion>`
-
-
-render(header(), document.getElementById("root"))
+// let name="i-py pr";
+//
+// var header=()=>html`
+//   <amp-accordion class="menu" disable-session-states>
+//     <section>
+//       <h5 class="amp_a">${name}</h5>
+//       <div>
+//         <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
+//         <a href="https://nuitmod.github.io/npx_io/">npx_io</a>
+//         <a href="https://nuitmod.github.io/io_proj/amp/">io_proj</a>
+//         <a href="https://nuitmod.github.io/mod_i">mod_i main</a>
+//       </div>
+//     </section>
+//   </amp-accordion>`
+//
+//
+// render(header(), document.getElementById("root"))
