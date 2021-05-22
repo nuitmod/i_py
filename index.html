@@ -95,7 +95,7 @@
   </head>
 <body>
   <div id="root"></div>
-  <amp-state id="my_data" src=".">
+  <amp-state id="my_data">
     <script type="application/json">
       {
         "items":[
@@ -121,7 +121,7 @@
     </script>
   </amp-state>
 
-  <amp-img src="./img/md1.JPG" alt="" height="79" width="65"></amp-img>
+  <amp-img src="./img/md1.JPG" alt="" height="79" width="55"></amp-img>
 
   <p [text]="my_data.items.map(i=>i.name)">wm name:</p>
   <p [text]="my_data.items.map(i=>i.job)">wm job:</p>
@@ -153,8 +153,8 @@
 
 
 <!-- <script>var exports = {};</script> -->
-<!-- <script src='./components/main.js' type="module"></script> -->
-<script src='./components/header.js' type="module"></script>
+<!-- <script src='./components/main.js' type="module"></script>
+<script src='./components/header.js' type="module"></script>-->
 
 <!-- <amp-script src='./components/header.js'></amp-script> -->
 
