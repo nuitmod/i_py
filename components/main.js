@@ -2,7 +2,7 @@ import { html, render } from '../modules/preact_link.js';
 //var $ = window.jQuery;
 console.log("main file");
 let str_dat = "main ts data";
-let main = () => html `
+let main = () => html`
   <div>
     <amp-bind-macro id="repl2" arguments="str" expression="str.toLowerCase()">
     </amp-bind-macro>
