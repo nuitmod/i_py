@@ -10,7 +10,8 @@ var header = () => html `
         <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
         <a href="https://nuitmod.github.io/npx_io/">npx_io</a>
         <a href="https://nuitmod.github.io/io_proj/amp/">io_proj</a>
-        <a href="https://nuitmod.github.io/mod_i">mod_i main</a>
+        <a href="https://nuitmod.github.io/mod_i/amp/">mod_i</a>
+        <a href="https://i-nuit.vercel.app/">i-nuit</a>
       </div>
     </section>
   </amp-accordion>`;

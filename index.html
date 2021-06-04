@@ -35,6 +35,9 @@
         background: var(--bg-main);
         font-size: 10px;
       }
+      .a-img{
+        background-color: var(--bg-menu);;
+      }
       amp-accordion {
         background: var(--bg-menu);
         color: var(--bg-main);
@@ -66,7 +69,7 @@
       {
         "@context": "http://schema.org",
         "@type": "Webpage",
-        "url": "https://mod-i.vercel.app/index.html",
+        "url": "https://i-py.vercel.app/index.html",
         "name": "i-py amp",
         "headline": "i-py amp",
         "description": "i-py amp",
@@ -120,8 +123,9 @@
       }
     </script>
   </amp-state>
-
-  <amp-img src="./img/md1.JPG" alt="" height="69" width="55"></amp-img>
+  <div class="a-img">
+    <amp-img src="./img/md1.JPG" alt="" height="69" width="55"></amp-img>
+  </div>
 
   <p [text]="my_data.items.map(i=>i.name)">wm name:</p>
   <p [text]="my_data.items.map(i=>i.job)">wm job:</p>
@@ -135,21 +139,21 @@
   <p [text]="'miut :: ' + y2.name">dat2</p>
   <button on="tap:AMP.setState({y2: {name:'Miut'}})">miut</button>
 
+
 <amp-bind-macro id="re_case" arguments="str" expression="str.toLowerCase()">
 </amp-bind-macro>
-
 <input type="text" placeholder="dat" on="input-throttled:AMP.setState({ arg: event.value })">
 <p [text]="'Input is url(..://..return void../...)' + re_case(arg)">
-  Your sanitized link will display here. You can copy and paste into search bar to test.
+  Your link will display here. You can copy and paste into search bar to test.
 </p>
-
+<br>
 
 <div id="main"></div>
 
-<amp-install-serviceworker src="./sw.js"
+<!-- <amp-install-serviceworker src="./sw.js"
                            data-iframe-src="install-sw.html"
                            layout="nodisplay">
-</amp-install-serviceworker>
+</amp-install-serviceworker> -->
 
 
 <!-- <script>var exports = {};</script> -->
