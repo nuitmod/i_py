@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="i-py ver">
     <meta name="google-site-verification" content="lu0ezzTuvs3DZa0Zx7k3T0_Izfrwd7ovQT2jz88VbkQ" />
+    <!-- <meta name="amp-script-src" content="sha384-OAd_PwwUosA7OCGU7k3jyQPMuWvttCq063Ae8gBWV0mf0yju-2n1qOpl8_Jmm1RE"> -->
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
@@ -19,6 +20,7 @@
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
     <!-- <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script> -->
     <style amp-custom>
       /* Add your styles here */
@@ -147,6 +149,18 @@
   Your link will display here. You can copy and paste into search bar to test.
 </p>
 <br>
+
+<amp-script layout="container" script="w-dat" data-ampdevmode>
+  <div id="w-inp">iiiii</div>
+</amp-script>
+
+<script type="text/plain" id="w-dat" target="amp-script">
+
+   var inp=document.querySelector("#w-inp");
+   //inp.innerHTML="YUYUYUYUYUUYU";
+   console.log(inp);
+
+</script>
 
 <div id="main"></div>
 
