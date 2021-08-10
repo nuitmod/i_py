@@ -1,7 +1,12 @@
+// <reference path ="../typings/globals/jquery/index.d.ts"/>
+//<reference types="jquery" />
+//<reference types="node" />
+//
 import { html, render } from '../modules/preact_link.js';
-//var $ = window.jQuery;
-console.log("main file");
-let str_dat = "main.ts";
+let str_dat = "main.ts file dat";
+//console.log("main file");
+//console.log($);
+$('#inp_data').text("yyyyyyyyyyyyyyyyyyyyyy");
 let main = () => html `
   <div>
     <h5>${str_dat}</h5>

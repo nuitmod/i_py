@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="i-py ver">
-    <meta name="google-site-verification" content="lu0ezzTuvs3DZa0Zx7k3T0_Izfrwd7ovQT2jz88VbkQ" />
-    <!-- <meta name="amp-script-src" content="sha384-OAd_PwwUosA7OCGU7k3jyQPMuWvttCq063Ae8gBWV0mf0yju-2n1qOpl8_Jmm1RE"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script> -->
+    <meta name="amp-script-src" content="sha384-i54WC7u0nHVH9T7NNMrpIaJaMUtVdIwSH_2hiJRwMHAHr3uO3yqQrdF4o82kfRTc">
+    <meta name="amp-script-src" content="sha384-uw47rMSHUHQuOosex0LD4sx-H43GSwCVYiWXn2dtOHhIa88cxUeYiYtbp4mRv--l">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
@@ -38,7 +40,8 @@
         font-size: 10px;
       }
       .a-img{
-        background-color: var(--bg-menu);;
+        background-color: var(--bg-menu);
+        padding: 3px;
       }
       amp-accordion {
         background: var(--bg-menu);
@@ -152,32 +155,47 @@
 
 <amp-script layout="container" script="w-dat" >
   <div id="w-inp">iiiii</div>
+  <button>input data</button>
 </amp-script>
 
 <script type="text/plain" id="w-dat" target="amp-script">
+  let btn = document.querySelector('button');
+  btn.addEventListener('click', () => {
+    var inp=document.querySelector("#w-inp");
+    inp.innerHTML=" YUYUYUYUYUUYU";
+    console.log(inp);
+  });
 
-   var inp=document.querySelector("#w-inp");
-   //inp.innerHTML="YUYUYUYUYUUYU";
-   console.log(inp);
 </script>
 
-<amp-script layout="container" src="https://i-py.vercel.app/components/header.js" >
+<!-- <amp-script layout="container" src="https://i-py.vercel.app/components/header.js" >
 </amp-script>
 
 <amp-script layout="container" src="https://i-py.vercel.app/components/main.js" >
-</amp-script>
+</amp-script> -->
 
 <div id="main"></div>
+<div id="inp_data"></div>
 
 <!-- <amp-install-serviceworker src="./sw.js"
                            data-iframe-src="install-sw.html"
                            layout="nodisplay">
 </amp-install-serviceworker> -->
+<!--
+<amp-script layout="container" src="https://code.jquery.com/jquery-3.6.0.min.js" sandbox="allow-forms" >
+  $('#inp_data').text("yyyyyyyyyyyyyyyyyyyyyy");
+</amp-script>
+<amp-script layout="container" 3p-lib-src="https://code.jquery.com/jquery-1.11.3.js" sandbox="allow-forms" src="my-custom-js.js">
+  $('#inp_data').text("uu********uuuu");
+</amp-script>
+<script type="text/plain" id="u-dat" target="amp-script">
 
+  $('#inp_data').text("uu********uuuu");
 
+</script> -->
 <!-- <script>var exports = {};</script> -->
-<!-- <script src='./components/header.js' type="module"></script>
-<script src='./components/main.js' type="module"></script> -->
+<!-- <script src='./components/header.js' type="module"></script>-->
+ <!-- <script src='./components/main.js' type="module"></script> -->
 <!-- <amp-script src='./components/header.js'></amp-script> -->
 
 </body>
