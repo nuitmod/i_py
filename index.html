@@ -44,7 +44,7 @@
         font-size: 10px;
       }
       amp-img{
-         opacity: 0.8;
+         opacity: 0.7;
       }
       .a-img{
         background-color: var(--bg-menu);
@@ -110,7 +110,20 @@
     </script>
   </head>
 <body>
-  <div id="root"></div>
+ <amp-accordion class="main" disable-session-states>
+  <section>
+    <h6 class="amp_a">_</h6>
+      <div>
+        <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
+        <a href="https://nuitmod.github.io/npx_io/">npx_io</a>
+        <a href="https://nuitmod.github.io/io_proj/amp/">io_proj</a>
+        <a href="https://nuitmod.github.io/mod_i/amp/">mod_i</a>
+        <a href="https://w-mod.vercel.app/">w-mod</a>
+        <a href="https://vi-mod.vercel.app/">vi-mod</a>
+      </div>
+  </section>
+</amp-accordion> 
+<div id="root"></div>
   <amp-state id="my_data">
     <script type="application/json">
       {
@@ -137,7 +150,7 @@
     </script>
   </amp-state>
   <div class="a-img">
-    <amp-img src="./img/md1.JPG" alt="" height="69" width="55"></amp-img>
+    <amp-img src="./img/md1.JPG" alt="" height="69" width="52"></amp-img>
   </div>
 
   <p [text]="my_data.items.map(i=>i.name)">wm name:</p>
@@ -161,11 +174,18 @@
 </p>
 <br>
 
+<amp-accordion class="main" disable-session-states>
+  <section>
+    <h6 class="amp_a">_</h6>
+      <div>
 <amp-tiktok
   width="325"
   height="575"
   data-src="https://www.tiktok.com/@vi.mod/video/7049709915014696194"
 ></amp-tiktok>
+</div>
+  </section>
+</amp-accordion> 
 
 <amp-mega-menu height="30" layout="fixed-height">
   <nav>
