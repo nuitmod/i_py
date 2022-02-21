@@ -12,4 +12,5 @@ class handler(BaseHTTPRequestHandler):
         else:
             message = "Hello, ruth!"
         self.wfile.write(message.encode())
+        print(message)
         return
