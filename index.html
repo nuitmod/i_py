@@ -268,15 +268,15 @@
   async function fetch_dat(){
     let url="https://i-py.vercel.app/api/main"
     let res = await fetch(url);
-    let value=res.json(); console.log(value);
-    return Promise.resolve(res);
+    let value=res.text(); console.log(value);
+    return Promise.resolve(value);
   }
    
   btn2.addEventListener('click', ()=>{
     let res_dat=fetch_dat();
     let inp=document.querySelector("#vi-inp");
     inp.innerHTML=res_dat;
-    console.log(dat2);
+    console.log(res_dat);
   });
 
 </script>
