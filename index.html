@@ -8,8 +8,7 @@
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script> -->
     <!-- <meta name="amp-script-src" content="sha384-i54WC7u0nHVH9T7NNMrpIaJaMUtVdIwSH_2hiJRwMHAHr3uO3yqQrdF4o82kfRTc">
     <meta name="amp-script-src" content="sha384-uw47rMSHUHQuOosex0LD4sx-H43GSwCVYiWXn2dtOHhIa88cxUeYiYtbp4mRv--l"> -->
-    <meta name="amp-script-src" content="sha384-uPSzJCoqRaPDxJwVxR8jrjY-SthFsjUnrsg8tEQZBoCVdytuDT6mFY-CamFxSEpm">
-    <meta name="amp-script-src" content="sha384-RU1Ez3Vs1D494pyGnEo5PmxfO2wigdY3ox-Wqu3meiTUkpS3QF1yTpqbOWESievN">
+    <meta name="amp-script-src" content="sha384-IXYLUQc9_1bO32PonYLxAq78HE4Nu2IFtGoYSngsKGNi8XySsJojI8kLN8J4zUrD">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
@@ -222,6 +221,9 @@
 <amp-script layout="container" script="w-dat" >
   <div id="w-inp">iiiii</div>
   <button>input data</button>
+  <br>
+  <div id="vi-inp">vi inf</div>
+  <button id="btn-2">fetch</button>
 </amp-script>
 <!-- data-ampdevmode -->
 <script type="text/plain" id="w-dat" target="amp-script">
@@ -233,13 +235,29 @@
     console.log(data);
   });
 
+  let btn2 = document.getElementById('btn-2');
+  let dat2="vi is here"
+
+  async function fetch_dat(){
+    let url="https://i-py.vercel.app/api/main/"
+    let res = await fetch(url);
+    console.log(res);
+    return res;
+  }
+   
+  btn2.addEventListener('click', ()=>{
+    let res_dat=fetch_dat().then(res=>console.log(res));
+    let inp2=document.querySelector("#vi-inp");
+    let result=typeof res_dat; console.log(result);
+    inp2.innerHTML=res_dat; console.log(res_dat);
+  });
 </script>
 
-<amp-script layout="container" script="vi-dat">
+<!-- <amp-script layout="container" script="vi-dat">
   <div id="vi-inp">vi inf</div>
   <button id="btn-2">fetch</button>
 </amp-script>
-<!-- data-ampdevmode -->
+<!-- data-ampdevmode 
 <script type="text/plain" id="vi-dat" target="amp-script">
   let btn2 = document.getElementById('btn-2');
   let dat2="vi is here"
@@ -258,7 +276,7 @@
     console.log(dat2);
   });
 
-</script>
+</script> -->
 <!-- <amp-script layout="container" src="https://i-py.vercel.app/components/header.js" >
 </amp-script>
 
