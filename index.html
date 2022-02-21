@@ -6,9 +6,7 @@
     <meta name="description" content="i-py ver">
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script> -->
-    <!-- <meta name="amp-script-src" content="sha384-i54WC7u0nHVH9T7NNMrpIaJaMUtVdIwSH_2hiJRwMHAHr3uO3yqQrdF4o82kfRTc">
-    <meta name="amp-script-src" content="sha384-uw47rMSHUHQuOosex0LD4sx-H43GSwCVYiWXn2dtOHhIa88cxUeYiYtbp4mRv--l"> -->
-    <meta name="amp-script-src" content="sha384-IXYLUQc9_1bO32PonYLxAq78HE4Nu2IFtGoYSngsKGNi8XySsJojI8kLN8J4zUrD">
+    <meta name="amp-script-src" content="sha384-iy1GGU5NgXOWvRah9ifjiXeSRPD65eQcq-uyuMbaprfbRWZvbOAfPN-bzbc37CWz">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
@@ -25,10 +23,8 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
     <!-- <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script> -->
-    
-
-<script async custom-element="amp-tiktok" src="https://cdn.ampproject.org/v0/amp-tiktok-0.1.js"></script>
-<script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
+    <script async custom-element="amp-tiktok" src="https://cdn.ampproject.org/v0/amp-tiktok-0.1.js"></script>
+    <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
 
     <style amp-custom>
       /* Add your styles here */
@@ -218,15 +214,15 @@
   </nav>
 </amp-mega-menu>
 <br>
-<div id="vi-inp">vi inf</div>
+<!-- <div id="vi-inp">vi inf</div>
 <button id="btn-2">fetch</button>
-<br>
+<br> -->
 <amp-script layout="container" script="w-dat" >
   <div id="w-inp">iiiii</div>
   <button>input data</button>
   <br>
   <div id="vi-inp">vi inf</div>
-  <button id="btn-2">fetch</button>
+  <button id="btn-2">fetch dat</button>
 </amp-script>
 <!-- data-ampdevmode -->
 <script type="text/plain" id="w-dat" target="amp-script">
@@ -239,21 +235,19 @@
   });
 
   let btn2 = document.getElementById('btn-2');
-  let dat2="vi is here"
+  let inp=document.querySelector("#vi-inp");
 
   async function fetch_dat(){
-    let url="https://i-py.vercel.app/api/main/"
+    let url="https://i-py.vercel.app/api/main"
     let res = await fetch(url);
-    console.log(res);
-    return res;
+    let value=await res.text(); console.log(value);
+    inp.innerHTML=value;
   }
    
   btn2.addEventListener('click', ()=>{
-    let res_dat=fetch_dat().then(res=>console.log(res));
-    let inp2=document.querySelector("#vi-inp");
-    let result=typeof res_dat; console.log(result);
-    inp2.innerHTML=res_dat; console.log(res_dat);
+    fetch_dat();
   });
+
 </script>
 
 <!-- <amp-script layout="container" script="vi-dat">
@@ -261,7 +255,7 @@
   <button id="btn-2">fetch</button>
 </amp-script>
 <!-- data-ampdevmode--> 
-<script>
+<!-- <script>
   let btn2 = document.getElementById('btn-2');
   let inp=document.querySelector("#vi-inp");
   let dat2="vi is here"
@@ -277,7 +271,7 @@
     fetch_dat();
   });
 
-</script>
+</script> -->
 <!-- <amp-script layout="container" src="https://i-py.vercel.app/components/header.js" >
 </amp-script>
 
