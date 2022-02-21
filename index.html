@@ -217,7 +217,10 @@
     </ul>
   </nav>
 </amp-mega-menu>
-
+<br>
+<div id="vi-inp">vi inf</div>
+<button id="btn-2">fetch</button>
+<br>
 <amp-script layout="container" script="w-dat" >
   <div id="w-inp">iiiii</div>
   <button>input data</button>
@@ -257,26 +260,26 @@
   <div id="vi-inp">vi inf</div>
   <button id="btn-2">fetch</button>
 </amp-script>
-<!-- data-ampdevmode 
-<script type="text/plain" id="vi-dat" target="amp-script">
+<!-- data-ampdevmode--> 
+<script>
   let btn2 = document.getElementById('btn-2');
   let dat2="vi is here"
 
   async function fetch_dat(){
     let url="https://i-py.vercel.app/api/main"
-    let res = await fetch(url)
-    console.log(res);
-    return res;
+    let res = await fetch(url);
+    let value=res.json(); console.log(value);
+    return Promise.resolve(res);
   }
    
   btn2.addEventListener('click', ()=>{
     let res_dat=fetch_dat();
     let inp=document.querySelector("#vi-inp");
-    inp.innerHTML=res_dat.then();
+    inp.innerHTML=res_dat;
     console.log(dat2);
   });
 
-</script> -->
+</script>
 <!-- <amp-script layout="container" src="https://i-py.vercel.app/components/header.js" >
 </amp-script>
 
