@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script> -->
     <!-- <meta name="amp-script-src" content="sha384-i54WC7u0nHVH9T7NNMrpIaJaMUtVdIwSH_2hiJRwMHAHr3uO3yqQrdF4o82kfRTc">
     <meta name="amp-script-src" content="sha384-uw47rMSHUHQuOosex0LD4sx-H43GSwCVYiWXn2dtOHhIa88cxUeYiYtbp4mRv--l"> -->
-    <meta name="amp-script-src" content="sha384-ExrSEh1oPk5A4Ti683U4fOPbg7h_x_q-4NfoG_4mMd4WdSgNnw0fIUux5rz75Vuo">
+    <meta name="amp-script-src" content="sha384-0vXRDUdVFP-vKcd1DYIyR-hYzb01nY0oQ1LyAMWROtbSvOHnDnTEOMyaA7kU3mfk">
     <meta name="amp-script-src" content="sha384-RU1Ez3Vs1D494pyGnEo5PmxfO2wigdY3ox-Wqu3meiTUkpS3QF1yTpqbOWESievN">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
@@ -247,14 +247,14 @@
   async function fetch_dat(){
     let url="https://i-py.vercel.app/api/main"
     let res = await fetch(url)
-    console.log(res);
+    console.log(res.then());
     return res;
   }
    
   btn2.addEventListener('click', ()=>{
     let res_dat=fetch_dat();
     let inp=document.querySelector("#vi-inp");
-    inp.innerHTML=res_dat;
+    inp.innerHTML=res_dat.then();
     console.log(dat2);
   });
 
