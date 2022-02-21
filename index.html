@@ -263,20 +263,18 @@
 <!-- data-ampdevmode--> 
 <script>
   let btn2 = document.getElementById('btn-2');
+  let inp=document.querySelector("#vi-inp");
   let dat2="vi is here"
 
   async function fetch_dat(){
     let url="https://i-py.vercel.app/api/main"
     let res = await fetch(url);
     let value=await res.text(); console.log(value);
-    return value;
+    inp.innerHTML=value;
   }
    
   btn2.addEventListener('click', ()=>{
-    let res_dat=fetch_dat();
-    let inp=document.querySelector("#vi-inp");
-    inp.innerHTML=res_dat;
-    console.log(res_dat);
+    fetch_dat();
   });
 
 </script>
